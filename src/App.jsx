@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import Upload from './upload'
 import Login from './login'
+import NavBar from './navbar'
 import './App.css'
 
 function App() {
@@ -21,7 +22,7 @@ function App() {
 
   return (
     <div id="container">
-      <h1 className="header">H-Drive</h1>
+      <NavBar />
       
       {isLoggedin ? (
         <>
