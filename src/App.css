@@ -42,3 +42,52 @@
   color: var(--primary);
   font-weight: 500;
 }
+
+.storage-header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.storage-header-container .section-title {
+  margin-bottom: 0;
+}
+
+.storage-progress-wrapper {
+  width: 100%;
+  max-width: 300px;
+}
+
+.storage-progress-info {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.progress-bar-container {
+  width: 100%;
+  height: 8px;
+  background-color: var(--border);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  background-color: var(--primary);
+  transition: width 0.3s ease;
+}
+
+.progress-bar-fill.warning {
+  background-color: #f59e0b;
+}
+
+.progress-bar-fill.danger {
+  background-color: var(--danger);
+}

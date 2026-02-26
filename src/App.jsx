@@ -70,7 +70,7 @@ function App() {
             });
         if (lambdaResponse.ok) {
             alert("Successfully deleted " + filename);
-            fetchFiles(2000); // 2 second delay to allow for DynamoDB trigger
+            fetchFiles(2000);
         } else {
             const errorText = await lambdaResponse.text();
             let errorMessage = "Unknown error";
@@ -89,6 +89,22 @@ function App() {
     }
   };
 
+  const calculateTotalStorage = () => {
+    return files.reduce((acc, file) => acc + (file.file_size || 0), 0);
+  };
+
+  const totalStorage = calculateTotalStorage();
+  const STORAGE_LIMIT = 10 * 1024 * 1024 * 1024; // 10 GB
+  const storagePercentage = Math.min((totalStorage / STORAGE_LIMIT) * 100, 100);
+
+  const formatStorageSize = (bytes) => {
+    if (bytes === 0) return '0 Bytes';
+    const k = 1024;
+    const sizes = ['Bytes', 'KB', 'MB', 'GB', 'TB'];
+    const i = Math.floor(Math.log(bytes) / Math.log(k));
+    return parseFloat((bytes / Math.pow(k, i)).toFixed(1)) + ' ' + sizes[i];
+  };
+
   return (
     <div id="root">
       <NavBar isLoggedin={isLoggedin} onLogout={handleLogout} />
@@ -101,7 +117,21 @@ function App() {
             </section>
 
             <section className="storage-section">
-              <h2 className="section-title">My Storage</h2>
+              <div className="storage-header-container">
+                <h2 className="section-title">My Storage</h2>
+                <div className="storage-progress-wrapper">
+                  <div className="storage-progress-info">
+                    <span>{formatStorageSize(totalStorage)} / 10 GB Used</span>
+                    <span>{storagePercentage.toFixed(1)}%</span>
+                  </div>
+                  <div className="progress-bar-container">
+                    <div 
+                      className={`progress-bar-fill ${storagePercentage > 90 ? 'danger' : storagePercentage > 75 ? 'warning' : ''}`}
+                      style={{ width: `${storagePercentage}%` }}
+                    ></div>
+                  </div>
+                </div>
+              </div>
               {loading ? (
                 <div className="loading-state">Loading your files...</div>
               ) : (
