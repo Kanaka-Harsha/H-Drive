@@ -23,7 +23,7 @@ function Upload({ onUploadSuccess }) {
     setStatus({ message: "Preparing upload...", color: "var(--primary)" });
 
     try {
-      const lambdaResponse = await fetch('https://hbriggwyii.execute-api.us-east-1.amazonaws.com/hs3API/s3Uploader', {
+      const lambdaResponse = await fetch('YOUR API', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
