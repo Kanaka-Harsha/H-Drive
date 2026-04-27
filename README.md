@@ -40,7 +40,7 @@
 
 ```mermaid
 graph TD
-    A[React Web Client] -->|API Gateway| B(AWS Lambda Functions)
+    A[React Web Client] -->|API Gateway| B(AWS Lambda)
     B -->|Boto3| C[(AWS DynamoDB)]
     B -->|Boto3| D[AWS S3 Bucket]
     A -->|Direct Upload| D
