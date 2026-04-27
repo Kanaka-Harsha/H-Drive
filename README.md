@@ -153,12 +153,6 @@ The project is split into two main components:
 
 ---
 
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
----
-
 Developed with ❤️ by the H-Drive Team.
 =======
 * Node.js (v18+)
