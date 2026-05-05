@@ -1,4 +1,4 @@
-# 🛡️ H-Drive: Secure Serverless Cloud Storage -> (Currently A MVP)
+# 🛡️ H-Drive: Secure Serverless Cloud Storage
 
 
 **H-Drive** is a modern, serverless cloud storage solution designed to provide a secure and efficient way to store, manage, and access files in the cloud. Built with a React frontend and an AWS-powered backend, it leverages the scalability and security of industry-leading cloud services.
@@ -163,4 +163,4 @@ Developed with ❤️ by the H-Drive Team.
    ```bash
    git clone [https://github.com/Kanaka-Harsha/HS3.git](https://github.com/Kanaka-Harsha/HS3.git)
    cd HS3
->>>>>>> b256219fde9a35ec039a12e7ade2cb7aecc90333
+   ```
