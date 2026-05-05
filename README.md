@@ -63,7 +63,7 @@ HS3/
 │   ├── metaDataUploader.py # Stores file details in DynamoDB
 │   ├── s3Deleter.py        # Deletes files from S3
 │   ├── s3Uploader.py       # Handles uploads & pre-signed URLs
-│   └── userLogin.py        # Authentication logic
+│   └── userLogin.py        # Authentication logic -> Shifting to JWT/OAuth
 ├── Project_Documentation/   # Design assets and project docs
 │   ├── Images/             # Screenshots and diagrams
 │   └── Project Abstract.docx
@@ -97,16 +97,14 @@ The project is split into two main components:
 
 ## 🛠️ Tech Stack
 * **Frontend:** JavaScript, Vite, CSS
-* **Backend:** Python 3.x, Boto3 (AWS SDK)
+* **Backend:** Python 3.10, Boto3 (AWS SDK)
 * **Cloud:** AWS Lambda, S3, API Gateway
->>>>>>> b256219fde9a35ec039a12e7ade2cb7aecc90333
 
 ## 🚀 Getting Started
 
 ### Prerequisites
-<<<<<<< HEAD
--   **Node.js** (v18 or higher)
--   **npm** or **yarn**
+-   **Python** (3.10 or higher)
+-   **pip**
 -   **AWS Account** (with S3, DynamoDB, and Lambda configured)
 
 ### Installation
@@ -155,7 +153,7 @@ The project is split into two main components:
 
 Developed with ❤️ by the H-Drive Team.
 =======
-* Node.js (v18+)
+* Python 3.10
 * AWS CLI configured with appropriate permissions
 
 ### Installation
