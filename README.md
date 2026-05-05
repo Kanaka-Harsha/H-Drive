@@ -1,7 +1,7 @@
 # 🛡️ H-Drive: Secure Serverless Cloud Storage
 
 
-**H-Drive** is a modern, serverless cloud storage solution designed to provide a secure and efficient way to store, manage, and access files in the cloud. Built with a React frontend and an AWS-powered backend, it leverages the scalability and security of industry-leading cloud services.
+**H-Drive** is a modern, serverless cloud storage designed to provide a secure and efficient way to store, manage, and access files in the cloud. Built with a React frontend and an AWS-integrated backend, it leverages the scalability and security of industry-leading cloud services.
 
 ---
 
@@ -77,28 +77,6 @@ HS3/
 └── package.json            # Project dependencies
 ```
 
----
-=======
-# HS3 (H-Drive) 🚀
-**A Secure, Serverless Cloud Storage Solution**
-
-HS3 is a high-performance personal cloud storage application. It leverages a serverless architecture to provide seamless file management, including secure uploads, deletions, and metadata tracking.
-
-## 🏗️ Architecture
-The project is split into two main components:
-* **Frontend:** A modern, reactive UI built with [Vite](https://vitejs.dev/).
-* **Backend:** Serverless logic powered by [AWS Lambda](https://aws.amazon.com/lambda/) (Python) and [Amazon S3](https://aws.amazon.com/s3/).
-
-## ✨ Key Features
-* **Secure Authentication:** Managed via `userLogin.py`.
-* **File Management:** Upload and delete files directly to/from S3.
-* **Metadata Tracking:** Automatic metadata handling via specialized Lambda functions.
-* **Automated Deployment:** Includes a `deploy.sh` script for rapid iteration.
-
-## 🛠️ Tech Stack
-* **Frontend:** JavaScript, Vite, CSS
-* **Backend:** Python 3.10, Boto3 (AWS SDK)
-* **Cloud:** AWS Lambda, S3, API Gateway
 
 ## 🚀 Getting Started
 
@@ -152,7 +130,6 @@ The project is split into two main components:
 ---
 
 Developed with ❤️ by the H-Drive Team.
-=======
 * Python 3.10
 * AWS CLI configured with appropriate permissions
 
